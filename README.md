@@ -21,22 +21,44 @@ All reclassified rasters, along with the AHP weighting calculations and the fina
 # File Dictionary
 This repository is organized into specific directories to ensure the transparency and reproducibility of the suitability analysis.
 
-### 1. /Weights
+### 1. [/Weights](https://github.com/bavaria-analysis/soybean-suitability/tree/main/Weights)
 This folder contains the mathematical foundation for the multicriteria analysis.
 
-· AHP_Calculation.xlsx: The Microsoft Excel spreadsheet containing the pairwise comparison matrix for the seven criteria. It includes the calculation of the Cumulative Weight Index (CWI) and the Consistency Ratio (CR) of 0.028
+· AHP Calculation.xlsx: The Microsoft Excel spreadsheet containing the pairwise comparison matrix for the seven criteria. It includes the calculation of the Cumulative Weight Index (CWI) and the Consistency Ratio (CR) of 0.028.
 
+### 2. [/Rasters](https://github.com/bavaria-analysis/soybean-suitability/tree/main/Rasters)
+This directory holds the seven reclassified thematic layers (.tiff) used as inputs for the weighted overlay analysis, embedded in zipped files. All rasters are harmonized to a 25m resolution and the ETRS 1989 UTM Zone 32N coordinate system.
 
-# 3. Methodology and Software Requirements
-vvv
+· pH.zip: Reclassified soil pH based on FAO standards (Optimal: 6-7).
 
+· Organic_Carbon.zip: Reclassified Soil Organic Carbon (Optimal: 2.4-3.5%).
 
-# 4. How to reproduce the results
+· Slope.zip: Terrain slope derived from SRTM DEM (Optimal: 0-2%).
 
+· Drainage.zip: Topographic Wetness Index (TWI) representing soil moisture.
 
+· LULC.zip: Land use classification identifying arable vs. non-arable zones.
+
+· Temperature.zip: Temperature suitability based on Bavarian climatic mean.
+
+· Precipitation.zip: Precipitation suitability grids.
+
+### 3. [/Results](https://github.com/bavaria-analysis/soybean-suitability/tree/main/Results)
+· Soybean Suitability Layer.zip: the final output of the weighted overlay analysis, categorizing land into classes S1 (Highly Suitable) through N2 (Permanently Unsuitable).
+
+· NDVI_Validation.zip: The reclassified NDVI surface used for indirect validation.
+
+· Suitability Analysis_Statistics.xlsx: Tabular statistics of reclassified criteria, final suitability surface and overlap result from indirect validation.
+
+# 3. How to reproduce the results
+Step 1: Download the reclassified rasters from this repository.
+
+Step 2: Open the AHP Calculation Excel file to see the criteria weights.
+
+Step 3: Use the "Weighted Overlay" tool in ArcGIS Pro with the weights provided in the Excel file.
 
 # 5. Results
-
-
+The assessment indicated drainage and LULC as the most influential factors, followed by slope, pH, and Organic Carbon (OC). The final suitability map revealed that the Highly Suitable class covered 14.16% of the region, the Moderately and Marginally Suitable classes covered 54.89% and 27.81% of the region. Also, the Unsuitable Areas accounted for 3.14% of the study area.
+Indirect validation using NDVI overlap confirmed the predictive power of the suitability analysis, showing a strong positive correlation between highly suitable zones and areas of healthy vegetation growth.
 
 # 6. Credits
