@@ -64,3 +64,6 @@ The assessment indicated drainage and LULC as the most influential factors, foll
 Indirect validation using NDVI overlap confirmed the predictive power of the suitability analysis, showing a strong positive correlation between highly suitable zones and areas of healthy vegetation growth.
 
 # 6. Credits
+
+* #### Author: [Adebola David Adedayo](https://github.com/adebolaadedayo)
+* #### Supervisor: Vicente Tang
